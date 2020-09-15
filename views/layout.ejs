@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-Auto</title>
+        <link type="image/png" rel="icon" href="/images/logo/favicon.ico" />
+
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous"
+        />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/styles/main.css" />
+    </head>
+    <body>
+        <section class="top-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="/">
+                        <img src="/images/logo/logo.svg" alt="" />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="36"
+                            height="15"
+                            viewBox="0 0 36 15"
+                        >
+                            <g
+                                id="Group_1180"
+                                data-name="Group 1180"
+                                transform="translate(-141 -117)"
+                            >
+                                <rect
+                                    id="Rectangle_354"
+                                    data-name="Rectangle 354"
+                                    width="18"
+                                    height="5"
+                                    transform="translate(141 127)"
+                                    fill="#1d57a7"
+                                />
+                                <rect
+                                    id="Rectangle_355"
+                                    data-name="Rectangle 355"
+                                    width="36"
+                                    height="5"
+                                    transform="translate(141 117)"
+                                    fill="#1d57a7"
+                                />
+                            </g>
+                        </svg>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link landing-link" href="/"
+                                    >Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link landing-link" href="/blog"
+                                    >Blog</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link landing-link" href="/about"
+                                    >About us</a
+                                >
+                            </li>
+                            <li class="nav-item phone-number">
+                                <a class="nav-link" href="/contact"
+                                    ><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28.919"
+                                        height="28.944"
+                                        viewBox="0 0 28.919 28.944"
+                                    >
+                                        <path
+                                            id="Icon_feather-phone-call"
+                                            data-name="Icon feather-phone-call"
+                                            d="M16.275,5.552a5.065,5.065,0,0,1,4,4m-4-8.054a9.117,9.117,0,0,1,8.054,8.044m-1.013,8.084v3.039a2.026,2.026,0,0,1-2.208,2.026,20.048,20.048,0,0,1-8.743-3.11A19.755,19.755,0,0,1,6.286,13.5a20.048,20.048,0,0,1-3.11-8.783A2.026,2.026,0,0,1,5.192,2.513H8.231a2.026,2.026,0,0,1,2.026,1.742A13.007,13.007,0,0,0,10.966,7.1a2.026,2.026,0,0,1-.456,2.138L9.224,10.526A16.209,16.209,0,0,0,15.3,16.6l1.287-1.287a2.026,2.026,0,0,1,2.138-.456,13.008,13.008,0,0,0,2.847.709A2.026,2.026,0,0,1,23.316,17.628Z"
+                                            transform="translate(5.35 -1.422) rotate(19)"
+                                            fill="none"
+                                            stroke="#1d57a7"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="1.5"
+                                        />
+                                    </svg>
+                                    (404) 528-1327</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link contact" href="/appointment"
+                                    >Contact Us</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+
+<%- body %>
+
+
+<!-- Footer -->
+
+<footer>
+    <div class="container">
+        <div class="text-center">
+            <div class="copyright">
+                <p>Copyright © 2020 E-Auto Seguros.</p>
+                <p>All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bg">
+        <img src="/images/background/footerbg.png" alt="" />
+    </div>
+</footer>
+
+<script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"
+></script>
+<script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+></script>
+<script src="/js/main.js"></script>
+<script src="/js/form1.js"></script>
+<script src="/js/form3.js"></script>
+<script>
+    $(document).ready(function () {
+        $('input[type="radio"]').click(function () {
+            if ($(this).attr("id") == "yesLicense") {
+                $("#yesLicenseForm").show();
+            } else if($(this).attr("id") == "noLicense"){
+                $("#yesLicenseForm").hide();
+            }else{
+
+            }
+        });
+    });
+</script>
+
+<script>
+    setTimeout(function () {
+        $(".loading-animation").addClass("display-none");
+    }, 5000);
+    setTimeout(function () {
+        $(".result__wrapper").addClass("show");
+    }, 5000);
+    $(document).ready(function () {
+        $("#seeMore1").click(function () {
+            $(".more-info1").removeClass("displayNone");
+            $(".see-less1").removeClass("displayNone");
+            $(".see-more1").addClass("displayNone");
+        });
+        $("#seeLess1").click(function () {
+            $(".more-info1").addClass("displayNone");
+            $(".see-less1").addClass("displayNone");
+            $(".see-more1").removeClass("displayNone");
+        });
+
+        $("#seeMore2").click(function () {
+            $(".more-info2").removeClass("displayNone");
+            $(".see-less2").removeClass("displayNone");
+            $(".see-more2").addClass("displayNone");
+        });
+        $("#seeLess2").click(function () {
+            $(".more-info2").addClass("displayNone");
+            $(".see-less2").addClass("displayNone");
+            $(".see-more2").removeClass("displayNone");
+        });
+
+        $("#seeMore3").click(function () {
+            $(".more-info3").removeClass("displayNone");
+            $(".see-less3").removeClass("displayNone");
+            $(".see-more3").addClass("displayNone");
+        });
+        $("#seeLess3").click(function () {
+            $(".more-info3").addClass("displayNone");
+            $(".see-less3").addClass("displayNone");
+            $(".see-more3").removeClass("displayNone");
+        });
+    });
+</script>
+</body>
+</html>

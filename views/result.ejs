@@ -1,0 +1,1029 @@
+
+    <section class="hero result">
+        <div class="container">
+            <div class="loading-animation">
+                <div class="">
+                    <h1>
+                        Please wait 5 seconds while we gather your quotes...
+                    </h1>
+                    <div class="progress">
+                        <div
+                            id="dynamic"
+                            class="progress-bar progress-bar-success progress-bar-striped active"
+                            role="progressbar"
+                            aria-valuenow="0"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width: 0%"
+                        >
+                            <span id="current-progress"></span>
+                        </div>
+                    </div>
+                    <h3>Tip of the Day</h3>
+                    <p>
+                        The average consumer compares atleast 3 quotes
+                        before buying insurance. Don't leave money on the
+                        table by not comparing your options.
+                    </p>
+                </div>
+            </div>
+            <div class="result__wrapper">
+                <div class="result__header">
+                    <h2>Congratulations, <%= data.firstName %> <%= data.lastName %>!</h2>
+                    <p>Quote#: {ramdon#}</p>
+                </div>
+                <div class="result__note">
+                    <p>
+                        MR. <%= data.lastName %> Click below to view the quotes
+                        provided by our featured Insurers-for free!
+                    </p>
+                </div>
+
+                <!-- RESULT TAB 1 -->
+                <div class="result__tab">
+                    <nav>
+                        <div
+                            class="nav nav-tabs"
+                            id="nav-tab"
+                            role="tablist"
+                        >
+                            <a
+                                class="nav-link active"
+                                id="nav-min1-tab"
+                                data-toggle="tab"
+                                href="#nav-min1"
+                                role="tab"
+                                aria-controls="nav-min1"
+                                aria-selected="true"
+                                >Minimum</a
+                            >
+                            <a
+                                class="nav-link"
+                                id="nav-full1-tab"
+                                data-toggle="tab"
+                                href="#nav-full1"
+                                role="tab"
+                                aria-controls="nav-full1"
+                                aria-selected="false"
+                                >Full</a
+                            >
+                        </div>
+                    </nav>
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- RESULT INNER TAB 1 -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="nav-min1"
+                            role="tabpanel"
+                            aria-labelledby="nav-min1-tab"
+                        >
+                            <div class="result__card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="result__info">
+                                            <div class="result__img">
+                                                <img
+                                                    src="/images/r1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="result__discount">
+                                                <p>Discount</p>
+                                                <% if(data.maritalStatus === 'married'){ %>
+                                                    <span>Married</span>
+                                                    <br />
+                                                <% } %>
+                                                <span
+                                                    >Responsible
+                                                    Driver</span
+                                                >
+                                                <br />
+                                                <span>Other</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Monthly Payments</p>
+                                                    <h1>$<%= data.minValue %>/Mo</h1>
+                                                    <h3>$<%= data.minValue + 100 %>/Mo</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Down Payments</p>
+                                                    <h1>$<%= data.minValue * 1.5 %>/Do</h1>
+                                                    <h3>$<%= (data.minValue *1.5) + 100 %>/Do</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <div class="result__action">
+                                            <!-- <button class="custom-btn">
+                                                Call
+                                            </button> -->
+                                            <a href="tel:+9779843669284"> Call </a>
+                                            <button class="custom-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result__note">
+                                    <span
+                                        >*This is an estimated quote base on
+                                        the information provided, the
+                                        correct price will be provide by the
+                                        agent at the time of purchase.</span
+                                    >
+                                </div>
+
+                                <div class="text-center see-more see-more1">
+                                    <button class="btn" id="seeMore1">
+                                        see more
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="more-info more-info1 displayNone"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Primary Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                $25k / $50k
+                                            </p>
+                                            <p>Property Damage: $25,000</p>
+                                            <p>
+                                                Medical Payments: No
+                                                Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Uninsured Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                No Coverage
+                                            </p>
+                                            <p>
+                                                Property Damage: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Car Coverage</h4>
+                                            <p>Collision: No Coverage</p>
+                                            <p>
+                                                Comprehensive: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Other Coverages</h4>
+                                            <p>
+                                                Optional Third Party Towing
+                                                and
+                                            </p>
+                                            <p>
+                                                Rental Subscription: No
+                                                Coverage
+                                            </p>
+                                            <p>Accidental Death and</p>
+                                            <p>
+                                                Dismemberment: No Coverage
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="text-center see-less see-less1 displayNone"
+                                >
+                                    <button class="btn" id="seeLess1">
+                                        see less
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RESULT INNER TAB 2 -->
+                        <div
+                            class="tab-pane fade"
+                            id="nav-full1"
+                            role="tabpanel"
+                            aria-labelledby="nav-full1-tab"
+                        >
+                            <div class="result__card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="result__info">
+                                            <div class="result__img">
+                                                <img
+                                                    src="/images/r1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="result__discount">
+                                                <p>Discount</p>
+                                                <% if(data.maritalStatus === 'married'){ %>
+                                                    <span>Married</span>
+                                                    <br />
+                                                <% } %>
+                                                <span
+                                                    >Responsible
+                                                    Driver</span
+                                                >
+                                                <br />
+                                                <span>Other</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Monthly Payments</p>
+                                                    <h1>$<%= data.fullValue %>/Mo</h1>
+                                                    <h3>$<%= data.fullValue + 100 %>/Mo</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Down Payments</p>
+                                                    <h1>$<%= data.fullValue * 1.5 %>/Do</h1>
+                                                    <h3>$<%= (data.fullValue *1.5) + 100 %>/Do</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <div class="result__action">
+                                            <button class="custom-btn">
+                                                Call
+                                            </button>
+                                            <button class="custom-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result__note">
+                                    <span
+                                        >*This is an estimated quote base on
+                                        the information provided, the
+                                        correct price will be provide by the
+                                        agent at the time of purchase.</span
+                                    >
+                                </div>
+
+                                <div class="text-center see-more see-more1">
+                                    <button class="btn" id="seeMore1">
+                                        see more
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="more-info more-info1 displayNone"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Primary Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                $25k / $50k
+                                            </p>
+                                            <p>Property Damage: $25,000</p>
+                                            <p>
+                                                Medical Payments: No
+                                                Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Uninsured Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                No Coverage
+                                            </p>
+                                            <p>
+                                                Property Damage: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Car Coverage</h4>
+
+                                            <p>
+                                                Collision: $500.00
+                                                Deductible
+                                            </p>
+                                            <p>
+                                                Comprehensive: $500.00
+                                                Deductible
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Other Coverages</h4>
+                                            <p>
+                                                Optional Third Party Towing
+                                                and
+                                            </p>
+                                            <p>
+                                                Rental Subscription: No
+                                                Coverage
+                                            </p>
+                                            <p>Accidental Death and</p>
+                                            <p>
+                                                Dismemberment: No Coverage
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="text-center see-less see-less1 displayNone"
+                                >
+                                    <button class="btn" id="seeLess1">
+                                        see less
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESULT TAB 2 -->
+                <div class="result__tab mt-5">
+                    <nav>
+                        <div
+                            class="nav nav-tabs"
+                            id="nav-tab"
+                            role="tablist"
+                        >
+                            <a
+                                class="nav-link active"
+                                id="nav-min2-tab"
+                                data-toggle="tab"
+                                href="#nav-min2"
+                                role="tab"
+                                aria-controls="nav-min2"
+                                aria-selected="true"
+                                >Minimum</a
+                            >
+                            <a
+                                class="nav-link"
+                                id="nav-full2-tab"
+                                data-toggle="tab"
+                                href="#nav-full2"
+                                role="tab"
+                                aria-controls="nav-full2"
+                                aria-selected="false"
+                                >Full</a
+                            >
+                        </div>
+                    </nav>
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- RESULT INNER TAB 1 -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="nav-min2"
+                            role="tabpanel"
+                            aria-labelledby="nav-min2-tab"
+                        >
+                            <div class="result__card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="result__info">
+                                            <div class="result__img">
+                                                <img
+                                                    src="/images/r2.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="result__discount">
+                                                <p>Discount</p>
+                                                <span>Married</span>
+                                                <br />
+                                                <span
+                                                    >Responsible
+                                                    Driver</span
+                                                >
+                                                <br />
+                                                <span>Other</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Monthly Payments</p>
+                                                    <h1>$150.83/Mo</h1>
+                                                    <h3>$190.03/Mo</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Down Payments</p>
+                                                    <h1>$250.83/Do</h1>
+                                                    <h3>$190.03/Do</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <div class="result__action">
+                                            <button class="custom-btn">
+                                                Call
+                                            </button>
+                                            <button class="custom-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result__note">
+                                    <span
+                                        >*This is an estimated quote base on
+                                        the information provided, the
+                                        correct price will be provide by the
+                                        agent at the time of purchase.</span
+                                    >
+                                </div>
+
+                                <div class="text-center see-more see-more2">
+                                    <button class="btn" id="seeMore2">
+                                        see more
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="more-info more-info2 displayNone"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Primary Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                $25k / $50k
+                                            </p>
+                                            <p>Property Damage: $25,000</p>
+                                            <p>
+                                                Medical Payments: No
+                                                Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Uninsured Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                No Coverage
+                                            </p>
+                                            <p>
+                                                Property Damage: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Car Coverage</h4>
+                                            <p>Collision: No Coverage</p>
+                                            <p>
+                                                Comprehensive: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Other Coverages</h4>
+                                            <p>
+                                                Optional Third Party Towing
+                                                and
+                                            </p>
+                                            <p>
+                                                Rental Subscription: No
+                                                Coverage
+                                            </p>
+                                            <p>Accidental Death and</p>
+                                            <p>
+                                                Dismemberment: No Coverage
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="text-center see-less see-less2 displayNone"
+                                >
+                                    <button class="btn" id="seeLess2">
+                                        see less
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RESULT INNER TAB 2 -->
+                        <div
+                            class="tab-pane fade"
+                            id="nav-full2"
+                            role="tabpanel"
+                            aria-labelledby="nav-full2-tab"
+                        >
+                            <div class="result__card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="result__info">
+                                            <div class="result__img">
+                                                <img
+                                                    src="/images/r1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="result__discount">
+                                                <p>Discount</p>
+                                                <span>Married</span>
+                                                <br />
+                                                <span
+                                                    >Responsible
+                                                    Driver</span
+                                                >
+                                                <br />
+                                                <span>Other</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Monthly Payments</p>
+                                                    <h1>$150.83/Mo</h1>
+                                                    <h3>$190.03/Mo</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Down Payments</p>
+                                                    <h1>$250.83/Do</h1>
+                                                    <h3>$190.03/Do</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <div class="result__action">
+                                            <button class="custom-btn">
+                                                Call
+                                            </button>
+                                            <button class="custom-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result__note">
+                                    <span
+                                        >*This is an estimated quote base on
+                                        the information provided, the
+                                        correct price will be provide by the
+                                        agent at the time of purchase.</span
+                                    >
+                                </div>
+
+                                <div class="text-center see-more see-more2">
+                                    <button class="btn" id="seeMore2">
+                                        see more
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="more-info more-info3 displayNone"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Primary Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                $25k / $50k
+                                            </p>
+                                            <p>Property Damage: $25,000</p>
+                                            <p>
+                                                Medical Payments: No
+                                                Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Uninsured Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                No Coverage
+                                            </p>
+                                            <p>
+                                                Property Damage: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Car Coverage</h4>
+
+                                            <p>
+                                                Collision: $500.00
+                                                Deductible
+                                            </p>
+                                            <p>
+                                                Comprehensive: $500.00
+                                                Deductible
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Other Coverages</h4>
+                                            <p>
+                                                Optional Third Party Towing
+                                                and
+                                            </p>
+                                            <p>
+                                                Rental Subscription: No
+                                                Coverage
+                                            </p>
+                                            <p>Accidental Death and</p>
+                                            <p>
+                                                Dismemberment: No Coverage
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="text-center see-less see-less2 displayNone"
+                                >
+                                    <button class="btn" id="seeLess2">
+                                        see less
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RESULT TAB 3 -->
+                <div class="result__tab mt-5">
+                    <nav>
+                        <div
+                            class="nav nav-tabs"
+                            id="nav-tab"
+                            role="tablist"
+                        >
+                            <a
+                                class="nav-link active"
+                                id="nav-min3-tab"
+                                data-toggle="tab"
+                                href="#nav-min3"
+                                role="tab"
+                                aria-controls="nav-min3"
+                                aria-selected="true"
+                                >Minimum</a
+                            >
+                            <a
+                                class="nav-link"
+                                id="nav-full3-tab"
+                                data-toggle="tab"
+                                href="#nav-full3"
+                                role="tab"
+                                aria-controls="nav-full3"
+                                aria-selected="false"
+                                >Full</a
+                            >
+                        </div>
+                    </nav>
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <!-- RESULT INNER TAB 1 -->
+                        <div
+                            class="tab-pane fade show active"
+                            id="nav-min3"
+                            role="tabpanel"
+                            aria-labelledby="nav-min3-tab"
+                        >
+                            <div class="result__card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="result__info">
+                                            <div class="result__img">
+                                                <img
+                                                    src="/images/r3.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="result__discount">
+                                                <p>Discount</p>
+                                                <span>Married</span>
+                                                <br />
+                                                <span
+                                                    >Responsible
+                                                    Driver</span
+                                                >
+                                                <br />
+                                                <span>Other</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Monthly Payments</p>
+                                                    <h1>$150.83/Mo</h1>
+                                                    <h3>$190.03/Mo</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Down Payments</p>
+                                                    <h1>$250.83/Do</h1>
+                                                    <h3>$190.03/Do</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <div class="result__action">
+                                            <button class="custom-btn">
+                                                Call
+                                            </button>
+                                            <button class="custom-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result__note">
+                                    <span
+                                        >*This is an estimated quote base on
+                                        the information provided, the
+                                        correct price will be provide by the
+                                        agent at the time of purchase.</span
+                                    >
+                                </div>
+
+                                <div class="text-center see-more see-more3">
+                                    <button class="btn" id="seeMore3">
+                                        see more
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="more-info more-info3 displayNone"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Primary Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                $25k / $50k
+                                            </p>
+                                            <p>Property Damage: $25,000</p>
+                                            <p>
+                                                Medical Payments: No
+                                                Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Uninsured Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                No Coverage
+                                            </p>
+                                            <p>
+                                                Property Damage: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Car Coverage</h4>
+                                            <p>Collision: No Coverage</p>
+                                            <p>
+                                                Comprehensive: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Other Coverages</h4>
+                                            <p>
+                                                Optional Third Party Towing
+                                                and
+                                            </p>
+                                            <p>
+                                                Rental Subscription: No
+                                                Coverage
+                                            </p>
+                                            <p>Accidental Death and</p>
+                                            <p>
+                                                Dismemberment: No Coverage
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="text-center see-less see-less3 displayNone"
+                                >
+                                    <button class="btn" id="seeLess3">
+                                        see less
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RESULT INNER TAB 2 -->
+                        <div
+                            class="tab-pane fade"
+                            id="nav-full3"
+                            role="tabpanel"
+                            aria-labelledby="nav-full3-tab"
+                        >
+                            <div class="result__card">
+                                <div class="row">
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="result__info">
+                                            <div class="result__img">
+                                                <img
+                                                    src="/images/r1.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="result__discount">
+                                                <p>Discount</p>
+                                                <span>Married</span>
+                                                <br />
+                                                <span
+                                                    >Responsible
+                                                    Driver</span
+                                                >
+                                                <br />
+                                                <span>Other</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-5">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Monthly Payments</p>
+                                                    <h1>$150.83/Mo</h1>
+                                                    <h3>$190.03/Mo</h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div
+                                                    class="result__price-card"
+                                                >
+                                                    <p>Down Payments</p>
+                                                    <h1>$250.83/Do</h1>
+                                                    <h3>$190.03/Do</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-2">
+                                        <div class="result__action">
+                                            <button class="custom-btn">
+                                                Call
+                                            </button>
+                                            <button class="custom-btn">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="result__note">
+                                    <span
+                                        >*This is an estimated quote base on
+                                        the information provided, the
+                                        correct price will be provide by the
+                                        agent at the time of purchase.</span
+                                    >
+                                </div>
+
+                                <div class="text-center see-more see-more3">
+                                    <button class="btn" id="seeMore3">
+                                        see more
+                                    </button>
+                                </div>
+
+                                <div
+                                    class="more-info more-info3 displayNone"
+                                >
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Primary Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                $25k / $50k
+                                            </p>
+                                            <p>Property Damage: $25,000</p>
+                                            <p>
+                                                Medical Payments: No
+                                                Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Uninsured Liability</h4>
+                                            <p>
+                                                Bodily Injury (BI) Limits:
+                                                No Coverage
+                                            </p>
+                                            <p>
+                                                Property Damage: No Coverage
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Car Coverage</h4>
+
+                                            <p>
+                                                Collision: $500.00
+                                                Deductible
+                                            </p>
+                                            <p>
+                                                Comprehensive: $500.00
+                                                Deductible
+                                            </p>
+                                        </div>
+                                        <div class="col-sm-12 col-md-3">
+                                            <h4>Other Coverages</h4>
+                                            <p>
+                                                Optional Third Party Towing
+                                                and
+                                            </p>
+                                            <p>
+                                                Rental Subscription: No
+                                                Coverage
+                                            </p>
+                                            <p>Accidental Death and</p>
+                                            <p>
+                                                Dismemberment: No Coverage
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="text-center see-less see-less3 displayNone"
+                                >
+                                    <button class="btn" id="seeLess3">
+                                        see less
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__bg">
+            <img src="/images/background/herobg.png" alt="" />
+        </div>
+    </section>
+
+    <section class="google-map">
+        <div class="container">
+            <div class="section--title">
+                <h1>Google Map</h1>
+                <p>Get direction to come meet up</p>
+            </div>
+            <div class="google-map__wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.215010127137!2d-84.48663008547754!3d33.9098654326685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f51108dc2f6741%3A0x18a2687b863fd81a!2s1755%20The%20Exchange%20SE%2C%20Atlanta%2C%20GA%2030339%2C%20USA!5e0!3m2!1sen!2snp!4v1599886552365!5m2!1sen!2snp"
+                    width="600"
+                    height="450"
+                    frameborder="0"
+                    style="border: 0"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0"
+                ></iframe>
+            </div>
+            <div class="location">
+                <h1>1755 The Exchange Se # 139 Atlanta, GA 30339</h1>
+            </div>
+            <div class="text-center">
+                <a href="" class="custom-btn">Direction</a>
+            </div>
+        </div>
+    </section>
